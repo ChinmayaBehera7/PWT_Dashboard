@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PWT Activity Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="dashboard">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+
+            <div>
+                <h1>PWT Activity Dashboard</h1>
+                <p>Style, process and user activity overview</p>
+            </div>
+
+            <!-- Time Filter -->
+            <div class="filter-container">
+
+                <label for="periodFilter">
+                    Time Period
+                </label>
+
+                <select id="periodFilter">
+                    <option value="0">Last 2 Months</option>
+                    <option value="1">Last 4 Months</option>
+                    <option value="2">Last 6 Months</option>
+                    <option value="3">Last 12 Months</option>
+                </select>
+
+            </div>
+
+        </header>
+
+
+        <!-- Style Overview -->
+        <section class="dashboard-section">
+
+            <div class="section-title">
+                <h2>Style Overview</h2>
+                <span id="selectedPeriod">Last 2 Months</span>
+            </div>
+
+            <div class="metrics-grid">
+
+                <div class="metric-card">
+                    <span>New Styles</span>
+                    <strong id="newStyles">27</strong>
+                    <small>Styles created</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Assigned</span>
+                    <strong id="assigned">74</strong>
+                    <small>Styles assigned</small>
+                </div>
+
+                <div class="metric-card">
+                    <span>Submitted</span>
+                    <strong id="submitted">36</strong>
+                    <small>Styles submitted</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Process Status -->
+        <section class="dashboard-section">
+
+            <div class="section-title">
+                <h2>Process Status</h2>
+                <span id="processPeriod">Last 2 Months</span>
+            </div>
+
+            <div class="process-card">
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot assigned"></span>
+                        Assigned
+                    </div>
+
+                    <strong id="statusAssigned">74</strong>
+                </div>
+
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot submitted"></span>
+                        Submitted
+                    </div>
+
+                    <strong id="statusSubmitted">36</strong>
+                </div>
+
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot approved"></span>
+                        Approved
+                    </div>
+
+                    <strong id="statusApproved">—</strong>
+                </div>
+
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot force-approved"></span>
+                        Force Approved
+                    </div>
+
+                    <strong id="statusForceApproved">—</strong>
+                </div>
+
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot rejected"></span>
+                        Rejected
+                    </div>
+
+                    <strong id="statusRejected">—</strong>
+                </div>
+
+
+                <div class="process-row">
+                    <div class="process-name">
+                        <span class="status-dot force-rejected"></span>
+                        Force Rejected
+                    </div>
+
+                    <strong id="statusForceRejected">—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- User Activity -->
+        <section class="dashboard-section">
+
+            <div class="section-title">
+                <h2>User Activity</h2>
+                <span id="userPeriod">Last 2 Months</span>
+            </div>
+
+            <div class="user-card">
+
+                <div>
+                    <span>Active Users</span>
+                    <small>Users active during selected period</small>
+                </div>
+
+                <strong id="activeUsers">91</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            PWT Activity Dashboard
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f6f7fb;
+    --card: #ffffff;
+    --text: #172033;
+    --muted: #737b8c;
+    --border: #e7e9ef;
+
+    --primary: #4f46e5;
+    --primary-light: #eef2ff;
+
+    --blue: #2563eb;
+    --orange: #d97706;
+    --green: #16a34a;
+    --red: #dc2626;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* =========================
+   Dashboard
+========================= */
+
+.dashboard {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.dashboard-header p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================
+   Filter
+========================= */
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.filter-container label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-container select {
+    min-width: 165px;
+
+    padding: 10px 35px 10px 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    background: var(--card);
+    color: var(--text);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-container select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.dashboard-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+.section-title h2 {
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.section-title span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================
+   Metric Cards
+========================= */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.metric-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.metric-card span {
+    display: block;
+
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.metric-card strong {
+    display: block;
+
+    margin-top: 9px;
+
+    font-size: 30px;
+    line-height: 1;
+}
+
+.metric-card small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================
+   Process Card
+========================= */
+
+.process-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.process-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.process-row:last-child {
+    border-bottom: none;
+}
+
+.process-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.process-row strong {
+    font-size: 15px;
+}
+
+
+/* =========================
+   Status Dots
+========================= */
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+.status-dot.assigned {
+    background: var(--blue);
+}
+
+.status-dot.submitted {
+    background: var(--orange);
+}
+
+.status-dot.approved,
+.status-dot.force-approved {
+    background: var(--green);
+}
+
+.status-dot.rejected,
+.status-dot.force-rejected {
+    background: var(--red);
+}
+
+
+/* =========================
+   User Activity
+========================= */
+
+.user-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    padding: 22px 24px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.user-card span {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user-card small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.user-card strong {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.dashboard-footer {
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Hover Effects
+========================= */
+
+.metric-card,
+.process-card,
+.user-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.metric-card:hover,
+.user-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-container {
+        width: 100%;
+    }
+
+    .filter-container select {
+        width: 100%;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+}
